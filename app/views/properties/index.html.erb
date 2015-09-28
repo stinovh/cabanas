@@ -1,3 +1,5 @@
+<H1>Search</H1>
+
 <%= simple_form_for @availability, method: 'get' do |f| %>
   <%= f.number_field :capacity %>
   <%= f.date_field :start_date %>
@@ -5,3 +7,14 @@
   <%= f.button :submit %>
 <% end %>
 
+<H1>See all properties</H1>
+
+<% @properties.each do |property| %>
+
+<h2><%= property.name %></h2>
+<p><%= property.country%></p>
+<p><%= property.price_night%></p>
+
+<% end %>
+
+<%= link_to "create a new Property", new_property_path %>
