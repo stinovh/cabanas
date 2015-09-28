@@ -9,3 +9,4 @@ Property.create(name: "Cosy cabana at the Miami Seaside", country: 'United State
 Property.create(name: "Cosy cabana at the Belgian Seaside", country: 'Belgium', latitude: 51.350835, longitude: 3.278367, price_night: 150, beach_name: "Albert Beach", capacity: 2)
 
 Availability.create(start_date:"2015-10-05", end_date:"2015-11-10", capacity: 4, property_id: 1 )
+Availability.create(start_date:"2015-10-05", end_date:"2015-11-10", capacity: 2, property_id: 2 )

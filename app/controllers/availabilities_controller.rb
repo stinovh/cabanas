@@ -1,5 +1,7 @@
 class AvailabilitiesController < ApplicationController
   def index
-    @params = params[:start_date]
+    @availabilities = Availability.search(params[:availability][:capacity]).order("created_at DESC")
   end
 end
+
+
