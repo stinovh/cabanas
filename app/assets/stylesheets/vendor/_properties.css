@@ -1,0 +1,19 @@
+.photo {
+
+background-image: url("http://www.dutchlove.com/a%20beach%20cabana.JPG");
+background-size: cover;
+height: 300px;
+margin-top: 30px;
+
+
+}
+
+.text-background {
+
+background-color: grey;
+background-size: cover;
+height: 300px;
+margin-top: 30px;
+
+
+}
