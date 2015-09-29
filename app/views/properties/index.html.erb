@@ -8,6 +8,13 @@
 <p><%= property.country%></p>
 <p><%= property.price_night%></p>
 
+<%= link_to "to the property", property_path(property) %>
+
 <% end %>
 
+<hr>
+<hr>
+
+<div>
 <%= link_to "create a new Property", new_property_path %>
+</div>
