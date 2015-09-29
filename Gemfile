@@ -53,6 +53,7 @@ gem 'simple_form'
 
 gem 'bootstrap-datepicker-rails'
 
+gem 'devise'
 
 gem 'figaro'
 
