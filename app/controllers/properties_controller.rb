@@ -1,6 +1,5 @@
 class PropertiesController < ApplicationController
   def index
-    @availability = Availability.new
   end
 
   def show
