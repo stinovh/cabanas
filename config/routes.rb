@@ -1,17 +1,7 @@
 Rails.application.routes.draw do
 
-
-  get 'users/new'
-
-  get 'users/create'
-
-  get 'users/show'
-
-  get 'users/edit'
-
-  get 'users/update'
-
   devise_for :users
+  resources :users
   resources :availabilities
   resources :properties
   resources :searches
