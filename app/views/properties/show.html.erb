@@ -9,16 +9,16 @@
     <hr>
   </div>
 
-  <div class="col-lg-5 text-background">
-  <h1> <%= @property.name %> </h1>
-  <p> Country: <%= @property.country %> </p>
-  <p> Beach name: <%= @property.beach_name %> </p>
-  <p> Price per night: <%= @property.price_night %> € </p>
-  <p> Capacity: <%= @property.capacity %> persons </p>
-
-  <%= link_to "edit my property", edit_property_path(@property), class: "btn btn-primary"%>
-   <%= link_to "delete my property", property_path(@property), method: :delete,class: "btn btn-primary"%>
-  </div>
+    <div class="col-lg-5 text-background">
+      <h1> <%= @property.name %> </h1>
+      <p> Country: <%= @property.country %> </p>
+      <p> Beach name: <%= @property.beach_name %> </p>
+      <p> Price per night: <%= @property.price_night %> € </p>
+      <p> Capacity: <%= @property.capacity %> persons </p>
+      <br>
+      <%= link_to "edit my property", edit_property_path(@property), class: "btn btn-primary"%>
+      <%= link_to "delete my property", property_path(@property), method: :delete,class: "btn btn-primary"%>
+   </div>
 
    <div class="col-lg-1">
   </div>

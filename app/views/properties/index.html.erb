@@ -1,19 +1,37 @@
 
+<div class="container">
+  <div class="row">
 
-<H1>See all properties</H1>
+    <div class="col-lg-12">
+    <H1>See all properties</H1>
+     </div>
 
-<% @properties.each do |property| %>
+    <% @properties.each do |property| %>
 
-<h2><%= property.name %></h2>
-<p><%= property.country%></p>
-<p><%= property.price_night%></p>
+      <div class="col-lg-5 text-background">
+        <h2><%= property.name %></h2>
+        <p> Country: <%= property.country%></p>
+        <p> Price <%= property.price_night%> € </p>
+        <br>
+        <%= link_to "to the property", property_path(property), class: "btn btn-primary" %>
+      </div>
 
-<%= link_to "to the property", property_path(property) %>
+      <div class="col-lg-1">
+      </div>
 
-<% end %>
+      <div class="col-lg-6 photo">
+       <p>photo</p>
+      </div>
 
-<hr>
-<hr>
+
+    <% end %>
+  </div>
+</div>
+
+
+
+<br>
+
 
 <div>
 <%= link_to "create a new Property", new_property_path %>
