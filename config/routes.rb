@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  get '/profile' => "users#show"
+  patch '/profile' => "users#update"
   devise_for :users
-  resources :users
   resources :availabilities
   resources :properties
   resources :searches
