@@ -1,24 +1,50 @@
-<H1>Create a new proprety</H1>
 
 
-<%= form_for(@property) do |f| %>
-  <%= f.label :name, "name" %>
-  <%= f.text_field :name %>
+<div class="background_for_edit_properties">
+  <div class="container">
+    <div class="row">
 
-  <%= f.label :country, "country" %>
-  <%= f.text_field :country %>
+      <div class="col-xs-12 properties_formbackground col-md-4 col-md-offset-8">
 
-  <%= f.label :beach_name, "beach name" %>
-  <%= f.text_field :beach_name %>
+      <H1>Edit property</H1>
+        <br>
+        <%= form_for(@property) do |f| %>
 
-  <%= f.label :price_night, "price per night" %>
-  <%= f.number_field :price_night %>
+          <%= f.label :name, "name:" %>
+          <br>
+          <%= f.text_field :name, class: "properties_form btn-forform"  %>
+          <br>
+          <br>
+          <%= f.label :country, "country:" %>
+          <br>
+          <%= f.text_field :country, class: "properties_form btn-forform" %>
+          <br>
+          <br>
+          <%= f.label :beach_name, "beach name:" %>
+          <br>
+          <%= f.text_field :beach_name, class: "properties_form btn-forform" %>
+          <br>
+          <br>
+          <%= f.label :price_night, "price per night:" %>
+          <br>
+          <%= f.number_field :price_night, class: "properties_form btn-forform" %>
+          <br>
+          <br>
+          <%= f.label :capacity, "capacity:" %>
+          <br>
+          <%= f.text_field :capacity, class: "properties_form btn-forform" %>
+          <br>
+          <br>
+          <br>
+          <%= f.submit class: "btn btn-primary btn-forform" %>
+          <br>
+        <% end %>
+          <br>
+          <br>
+          <%= link_to "Back to the property", property_path(@property), class: "btn btn-primary btn-forform" %>
+     </div>
 
- <%= f.label :capacity, "capacity" %>
-  <%= f.text_field :capacity %>
-
-
-  <%= f.submit %>
-
-<% end %>
+  </div>
+</div>
+</div>
 
