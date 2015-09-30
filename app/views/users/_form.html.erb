@@ -1,25 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2">
-      <h2>Edit your profile</h2>
-      <%= simple_form_for profile_path, method: "patch" do |f| %>
-        <%= f.error_notification %>
+<h2>Edit your profile</h2>
+<%= simple_form_for current_user, url: profile_edit_path, method: "patch" do |f| %>
+  <%= f.error_notification %>
 
-        <div class="form-inputs">
-          <%= f.input :user_name, autofocus: true %>
-          <%= f.input :first_name, autofocus: true %>
-          <%= f.input :last_name, autofocus: true %>
-          <%= f.input :street_name, autofocus: true %>
-          <%= f.input :house_number, autofocus: true %>
-          <%= f.input :country, autofocus: true %>
-          <%= f.input :zipcode, autofocus: true %>
-          <%= f.input :phone_number, autofocus: true %>
-        </div>
-
-        <div class="form-actions">
-          <%= f.button :submit, "Save changes" %>
-        </div>
-      <% end %>
-    </div>
+  <div class="form-inputs">
+    <%= f.input :user_name, autofocus: true %>
+    <%= f.input :first_name, autofocus: true %>
+    <%= f.input :last_name, autofocus: true %>
+    <%= f.input :street_name, autofocus: true %>
+    <%= f.input :house_number, autofocus: true %>
+    <%= f.input :country, autofocus: true %>
+    <%= f.input :zipcode, autofocus: true %>
+    <%= f.input :phone_number, autofocus: true %>
   </div>
-</div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Save changes" %>
+  </div>
+<% end %>
