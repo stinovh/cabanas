@@ -4,6 +4,7 @@ class PropertiesController < ApplicationController
   end
 
   def show
+    @property = Property.find(params[:id])
   end
 
   def new
@@ -16,13 +17,23 @@ class PropertiesController < ApplicationController
   end
 
   def edit
+     @property = Property.find(params[:id])
   end
 
   def update
+  @property = Property.find(params[:id])
+  @property.update(property_params)
+  redirect_to property_path(@property)
   end
 
   def destroy
+         @property = Property.find(params[:id])
+         @property.destroy
+        redirect_to properties_path
+
   end
+
+private
 
   def property_params
     params.require(:property).permit(:name, :country, :beach_name, :price_night, :capacity)
