@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
 
+  get '/profile' => "users#show"
+  get '/profile/edit' => "users#edit"
+  patch '/profile/edit' => "users#update"
 
+  devise_for :users
   resources :availabilities
   resources :properties
   resources :searches
+  root 'searches#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
