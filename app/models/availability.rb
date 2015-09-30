@@ -8,7 +8,7 @@ class Availability < ActiveRecord::Base
     search_scope = search_scope.where("start_date <= ?", "#{query.start_date}") if query.start_date.present?
     search_scope = search_scope.where("end_date >= ?", "#{query.end_date}") if query.end_date.present?
     search_scope = search_scope.where("properties.country like ?", "#{query.country}") if query.country.present?
-    search_scope = search_scope.where("properties.price_night <= ?", "#{query.price_night}") if query.price_night.present?
+    search_scope = search_scope.where("properties.price_night >= ?", "#{query.price_night}") if query.price_night.present?
     search_scope
   end
 end

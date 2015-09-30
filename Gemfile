@@ -51,4 +51,10 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+gem 'bootstrap-datepicker-rails'
+
+
 gem 'figaro'
+
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
