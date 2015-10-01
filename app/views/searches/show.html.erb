@@ -19,16 +19,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
         <% @availabilities.each do |a| %>
+        <tr>
           <td><%= a.property.name %></td>
           <td><%= a.property.country %></td>
           <td><%= a.property.price_night %></td>
           <td><%= a.property.beach_name %></td>
+          <td><%= link_to "Book", new_search_property_booking_path(search_id: @search, property_id: a.property), class: "btn btn-primary" %></td>
           <td></td>
-          <td></td>
-        <% end %>
         </tr>
+        <% end %>
       </tbody>
     </table>
 
