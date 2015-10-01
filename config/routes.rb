@@ -8,8 +8,16 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :availabilities
-  resources :properties
-  resources :searches
+  resources :properties, except: [:show]
+
+  resources :searches, only: [:show] do
+    resources :properties, only: [:show] do
+      resources :bookings, only: [:new]
+    end
+  end
+
+  resources :bookings, only: [:create]
+  resources :searches, only: [:new, :create]
   root 'searches#new'
 
   # The priority is based upon order of creation: first created -> highest priority.

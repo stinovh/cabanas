@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <p>Name: <%= @property.name %></p>
+      <p>On: <%= @property.beach_name %></p>
+      <p>Price for a night:<%= @property.price_night %></p>
+      <p>From: <%= @search.start_date %></p>
+      <p>To: <%= @search.end_date %></p>
+      <p>Capacity: <%= @search.capacity %></p>
+
+      <%= simple_form_for(@booking) do |f| %>
+      <div class="form-inputs">
+        <%= f.hidden_field :start_date, value: @search.start_date %>
+        <%= f.hidden_field :end_date, value: @search.end_date %>
+        <%= f.hidden_field :capacity, value: @search.capacity %>
+        <%= f.hidden_field :beach_name, value: @property.beach_name %>
+        <%= f.hidden_field :price_night, value: @property.price_night %>
+        <%= f.hidden_field :property_id, value: @property.id %>
+        <%= f.hidden_field :user_id, value: current_user.id %>
+      </div>
+      <div class="form-actions">
+        <%= f.submit "Confirm booking" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,9 +1,13 @@
+require 'date'
+
 class SearchesController < ApplicationController
   def new
     @search = Search.new
   end
 
   def create
+    params[:search][:start_date] = Date.strptime(params[:search][:start_date],"%m/%d/%Y")
+    params[:search][:end_date] = Date.strptime(params[:search][:end_date],"%m/%d/%Y")
     @search = Search.create(search_params)
     redirect_to @search
   end

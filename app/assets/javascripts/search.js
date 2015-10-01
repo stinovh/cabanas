@@ -6,11 +6,13 @@ $(window).ready(function(){
           return date.valueOf() < now.valueOf() ? 'disabled' : '';
         }
       }).on('changeDate', function(ev) {
-        if (ev.date.valueOf() > checkout.date.valueOf()) {
-          var newDate = new Date(ev.date)
-          newDate.setDate(newDate.getDate() + 1);
-          checkout.setValue(newDate);
-        }
+        // checkout is only set later in line 18, so you can't do .date.valueOf()
+        var checkout = checkin + (24*1200)
+        // if (ev.date.valueOf() > checkout) {
+        //   var newDate = new Date(ev.date)
+        //   newDate.setDate(newDate.getDate() + 1);
+        //   checkout.setValue(newDate);
+        // }
         checkin.hide();
         $('#end_date')[0].focus();
       }).data('datepicker');
