@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/profile' => "users#show"
   get '/profile/edit' => "users#edit"
   patch '/profile/edit' => "users#update"
+  get '/profile/myproperties' => "properties#index_profile"
+  get '/profile/addproperty' => "properties#new"
 
   devise_for :users
   resources :availabilities

@@ -1,6 +1,12 @@
 class PropertiesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @properties = Property.all
+  end
+
+  def index_profile
+    @properties = current_user.properties
   end
 
   def show
@@ -13,7 +19,7 @@ class PropertiesController < ApplicationController
 
   def create
     @property = Property.create(property_params)
-    redirect_to properties_path
+    redirect_to profile_myproperties_path
   end
 
   def edit
@@ -36,7 +42,7 @@ class PropertiesController < ApplicationController
 private
 
   def property_params
-    params.require(:property).permit(:name, :country, :beach_name, :price_night, :capacity)
+    params.require(:property).permit(:name, :country, :beach_name, :price_night, :capacity, :user_id)
   end
 
 
