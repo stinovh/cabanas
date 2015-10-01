@@ -7,11 +7,13 @@
                 <li>
                   <%= link_to "Edit your profile", profile_edit_path %>
                 </li>
+                <% if !current_user.properties.empty? %>
+                  <li>
+                    <%= link_to "View your properties", profile_myproperties_path %>
+                  </li>
+                <% end %>
                 <li>
-                    <a href="#">Shortcuts</a>
-                </li>
-                <li>
-                    <a href="#">Overview</a>
+                  <%= link_to "Add a property", profile_addproperty_path %>
                 </li>
                 <li>
                     <a href="#">Events</a>
