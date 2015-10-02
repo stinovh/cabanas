@@ -6,8 +6,8 @@ class SearchesController < ApplicationController
   end
 
   def create
-    params[:search][:start_date] = Date.strptime(params[:search][:start_date],"%m/%d/%Y")
-    params[:search][:end_date] = Date.strptime(params[:search][:end_date],"%m/%d/%Y")
+    params[:search][:start_date] = Date.strptime(params[:search][:start_date],"%m/%d/%Y") if !params[:search][:start_date].empty?
+    params[:search][:end_date] = Date.strptime(params[:search][:end_date],"%m/%d/%Y") if !params[:search][:end_date].empty?
     @search = Search.create(search_params)
     redirect_to @search
   end

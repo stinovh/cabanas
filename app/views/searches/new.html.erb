@@ -1,77 +1,37 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active">
-          <%= image_tag 'cabana beach 1', alt: "First slide" %>
-        </div>
-        <div class="item">
-          <%= image_tag 'cabana beach 2', alt: "Second slide" %>
-        </div>
-        <div class="item">
-          <%= image_tag 'cabana beach 3', alt: "Third slide" %>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-</div>
-
-<div class="search">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-xs-offset-3 text-center">
-        <%= image_tag 'Drawing', alt: 'logo' %>
-        <h1 id="tagline">Paradise is waiting for you ...</h1>
-      </div>
-    </div>
-  </div>
-    <div class="container search-bar">
+<div class="bg-search-bar">
+  <div class="container search-bar">
       <div class="row">
-        <div class="col-xs-12">
-          <div class="form-section">
-            <div class="row">
-                <%= simple_form_for @search do |f| %>
-                  <div class="col-xs-2">
-                    <div class="form-group">
-                      <label class="sr-only" for="country">Country</label>
-                      <%= f.text_field :country, class: "form-control", id: "country", placeholder: "Which country ?" %>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="form-group">
-                      <label class="sr-only" for="price_night">Price/night</label>
-                      <%= f.text_field :price_night, class: "form-control", id: "price_night", placeholder: "price/night" %>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="form-group">
-                      <label class="sr-only" for="start_date">Check in</label>
-                      <div class="input-group">
-                        <%= f.text_field :start_date, class: "form-control", id: "start_date", placeholder: "Check in" %>
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="form-group">
-                      <label class="sr-only" for="end_date">Check out</label>
-                      <div class="input-group">
-                        <%= f.text_field :end_date, class: "form-control", id: "end_date", placeholder: "Check out" %>
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <div class="form-group">
-                      <label class="sr-only" for="guest">Guest</label>
-                      <%= f.select :capacity, [['1 Guest',1],['2 Guests', 2],['3 Guests', 3],['4 Guests', 4],['5 Guests', 5],['6 Guests', 6],['7 Guests', 7],['8 Guests', 8],['9 Guests', 9],['10 Guests', 10],['11 Guests', 11],['12 Guests', 12],['13 Guests', 13],['14 Guests', 14],['15 Guests', 15],['16 Guests', 16]], {}, class: "form-control" %>
-                    </div>
-                  </div>
-                  <div class="col-xs-2">
-                    <button type="submit" class="btn btn-default btn-primary">Search</button>
-                  </div>
-               <% end %>
-            </div>
-          </div>
+        <div class="col-xs-6 col-xs-offset-3 text-center">
+          <%= image_tag 'Drawing', alt: 'logo' %>
+          <h1 id="tagline">Paradise is waiting for you ...</h1>
         </div>
       </div>
     </div>
+  <div class="container search-bar">
+    <div class="row">
+      <div class="col-xs-12 col-md-2">
+        <%= simple_form_for @search do |f| %>
+        <%= f.text_field :country, class: "form-control", id: "country", placeholder: "Which country ?" %>
+        </div>
+        <div class="col-xs-12 col-md-2">
+        <%= f.text_field :price_night, class: "form-control", id: "price_night", placeholder: "price/night" %>
+        </div>
+        <div class="col-xs-12 col-md-2">
+        <%= f.text_field :start_date, class: "form-control", id: "start_date", placeholder: "Check in" %>
+        </div>
+        <div class="col-xs-12 col-md-2">
+        <%= f.text_field :end_date, class: "form-control", id: "end_date", placeholder: "Check out" %>
+        </div>
+        <div class="col-xs-12 col-md-2">
+        <%= f.select :capacity, [['1 Guest',1],['2 Guests', 2],['3 Guests', 3],['4 Guests', 4],['5 Guests', 5],['6 Guests', 6],['7 Guests', 7],['8 Guests', 8],['9 Guests', 9],['10 Guests', 10],['11 Guests', 11],['12 Guests', 12],['13 Guests', 13],['14 Guests', 14],['15 Guests', 15],['16 Guests', 16]], {}, class: "form-control" %>
+        </div>
+        <div class="col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-0 text-center">
+          <%= f.submit "Search", class: "btn btn-danger submit-search" %>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
+
+
+
