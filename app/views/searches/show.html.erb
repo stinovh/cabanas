@@ -1,39 +1,34 @@
-<div class="container">
+<div class="container container_borer ">
   <div class="row">
-    <div class="col-xs-12 col-md-8 col-md-offset-2 table-responsive">
-    <table class="table table-hover table-striped">
-      <thead>
-        <tr>
-          <th>
-            Name
-          </th>
-          <th>
-            Country
-          </th>
-          <th>
-            Price per night
-          </th>
-          <th>
-            Beach name
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @final.each do |a| %>
-        <tr>
-          <td><%= a.property.name %></td>
-          <td><%= a.property.country %></td>
-          <td><%= a.property.price_night %></td>
-          <td><%= a.property.beach_name %></td>
-          <td><%= link_to "Book", new_search_property_booking_path(search_id: @search, property_id: a.property), class: "btn btn-primary" %></td>
-          <td></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <div class="col-xs-12 col-sm-8 boxes_container">
+      <div class="row">
 
+        <% @final.each do |a| %>
+          <div class="col-xs-12 col-sm-6 box_result">
+
+           <div class="box_image">
+            <H4 class="price-image"> <%= a.property.price_night %>€/day </H4>
+          <H3><%= link_to "B", new_search_property_booking_path(search_id: @search, property_id: a.property), class: "book-image" %></H3>
+
+           </div>
+
+           <div>
+            <H4> <%= a.property.name %> </H4>
+            <p> <%= a.property.country %> at <%= a.property.beach_name %></p>
+
+           </div>
+          </div>
+
+        <% end %>
+      </div>
     </div>
-  </div>
+
+    <div class="col-xs-12 col-sm-4 search_map">
+      <img src="http://i.imgur.com/pAL2ndH.png">
+    </div>
+
+
+</div>
 </div>
 
 
