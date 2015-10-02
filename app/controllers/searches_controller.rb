@@ -16,6 +16,14 @@ class SearchesController < ApplicationController
     @search = Search.find(params[:id])
     availabilities = Availability.search(@search).order("created_at DESC")
     @final = show_date(availabilities, @search).uniq
+    @props = []
+    @final.each do |av|
+      @props << av.property
+    end
+    @markers = Gmaps4rails.build_markers(@props) do |flat, marker|
+      marker.lat flat.latitude
+      marker.lng flat.longitude
+    end
   end
 
   private
