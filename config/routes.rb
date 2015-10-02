@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   patch '/profile/edit' => "users#update"
   get '/profile/myproperties' => "properties#index_profile"
   get '/profile/addproperty' => "properties#new"
+  get 'contact' => "pages#contact"
+  get 'about' => "pages#about"
+  get 'socialmedia' => "pages#social_media"
+
 
   devise_for :users
   resources :availabilities
