@@ -19,7 +19,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @availabilities.each do |a| %>
+        <% @final.each do |a| %>
         <tr>
           <td><%= a.property.name %></td>
           <td><%= a.property.country %></td>
@@ -31,7 +31,6 @@
         <% end %>
       </tbody>
     </table>
-
 
     </div>
   </div>
