@@ -23,3 +23,4 @@ class SearchesController < ApplicationController
     params.require(:search).permit(:country, :price_night, :capacity, :start_date, :end_date)
   end
 end
+

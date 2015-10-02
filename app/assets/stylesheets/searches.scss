@@ -12,6 +12,60 @@
   height: 1000px;
 }
 
+.container_borer {
+padding-top: 50px;
+padding-left: 0px;
+margin-left: 0px;
+}
+
+.boxes_container {
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 30px;
+ background-color: rgb(248, 248, 248);
+
+}
+
+.box_image {
+background-image: url("http://www.je-reussis-mes-photos.com/wp-content/uploads/2013/05/Cabane-de-plage.jpg");
+background-position: center center;
+background-repeat: no-repeat;
+background-size: 100% auto;
+height: 200px;
+padding-top: 150px;
+
+}
+
+.price-image {
+color: white;
+background-color: rgba(0,0,0, 0.6);
+width: 120px;
+}
+
+.book-image {
+    width: 35px;
+    position: absolute;
+    top: 5px;
+    right: 21px;
+    background-color: rgba(0,0,0, 0.3);
+    padding: 5px;
+    color: white;
+    border-radius: 60%;
+    text-align: center
+}
+
+.book-image:hover {
+color: red;
+}
+
+.search_map {
+background-image: url("http://i.imgur.com/pAL2ndH.png");
+background-size: cover;
+background: center center;
+height: 130px;
+padding-left: 2px;
+}
+
 @media (max-width: 991px) {
   .search-bar {
     padding-top: 100px;
