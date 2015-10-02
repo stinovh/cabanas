@@ -1,5 +1,6 @@
 class Availability < ActiveRecord::Base
   belongs_to :property
+  has_one :booking, through: :property
 
    def self.search(query = {})
     # where(:title, query) -> This would return an exact match of the query
