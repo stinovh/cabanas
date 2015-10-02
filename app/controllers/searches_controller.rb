@@ -46,3 +46,4 @@ class SearchesController < ApplicationController
     (search.start_date..search.end_date).cover?(date)
   end
 end
+
