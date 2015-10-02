@@ -14,6 +14,7 @@
 
 @media (max-width: 991px) {
   .search-bar {
+    padding-top: 100px;
     .col-xs-4 {
       padding-top: 10px;
     }
@@ -25,13 +26,9 @@
 
 @media (max-width: 34em) {
   .search-bar {
+    padding-top: 30px;
     img {
       width: 200px;
     }
-  }
-
-
-  .search-bar {
-    padding-top: 30px;
   }
 }
